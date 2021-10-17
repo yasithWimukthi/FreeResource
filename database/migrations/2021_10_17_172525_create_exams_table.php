@@ -14,7 +14,8 @@ class CreateExamsTable extends Migration
     public function up()
     {
         Schema::create('exams', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->integer('awarding_body_id');
             $table->timestamps();
         });
     }
