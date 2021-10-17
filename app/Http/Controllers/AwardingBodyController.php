@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AwardingBody;
 use Illuminate\Http\Request;
 
 class AwardingBodyController extends Controller
@@ -13,7 +14,7 @@ class AwardingBodyController extends Controller
      */
     public function index()
     {
-        //
+        $awardingBodies = AwardingBody::all();
     }
 
     /**
