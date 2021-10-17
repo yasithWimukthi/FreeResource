@@ -15,7 +15,7 @@ class CreateExamsTable extends Migration
     {
         Schema::create('exams', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('awarding_body_id');
+            $table->integer('awarding_body_id') -> unsigned() -> nullable() -> index();
             $table->timestamps();
         });
     }
