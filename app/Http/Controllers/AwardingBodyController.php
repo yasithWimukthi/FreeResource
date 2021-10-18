@@ -14,7 +14,7 @@ class AwardingBodyController extends Controller
      */
     public function index()
     {
-        $awardingBodies = AwardingBody::all();
+
     }
 
     /**
@@ -46,7 +46,7 @@ class AwardingBodyController extends Controller
      */
     public function show($id)
     {
-        //
+        return AwardingBody::whereId(1);
     }
 
     /**
@@ -69,7 +69,7 @@ class AwardingBodyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**

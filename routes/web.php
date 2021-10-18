@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Models\AwardingBody;
 use Illuminate\Support\Facades\Route;
 
@@ -14,11 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
 Route::get('/', function () {
-    return view('welcome');
+    $award = AwardingBody::whereId(1)->first();
+    echo $award->name;
 });
 
-Route::get('/register', function () {
-    $body = AwardingBody::findOrFail(1);
-});
+//Route::get('/register', 'AwardingBodyController@show'
+//);
 
