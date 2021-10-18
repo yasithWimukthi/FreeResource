@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\AwardingBody;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('/register', function () {
-    return 'welcome';
+    $body = AwardingBody::findOrFail(1);
 });
 
