@@ -83,6 +83,7 @@ class ExamController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $exam = Exam::findOrFail($id);
+        $exam->delete();
     }
 }

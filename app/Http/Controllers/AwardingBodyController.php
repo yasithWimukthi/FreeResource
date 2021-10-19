@@ -86,7 +86,8 @@ class AwardingBodyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $awardingBody = AwardingBody::findOrFail($id);
+        $awardingBody->delete();
     }
 
 
