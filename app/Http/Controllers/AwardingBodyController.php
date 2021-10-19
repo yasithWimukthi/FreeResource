@@ -14,7 +14,7 @@ class AwardingBodyController extends Controller
      */
     public function index()
     {
-
+        AwardingBody::all();
     }
 
     /**
