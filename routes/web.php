@@ -19,9 +19,12 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
+
+
 Route::get('/', function () {
-    $award = AwardingBody::whereId(1)->first();
-    echo $award->name;
+   $award = AwardingBody::whereId(1)->first()->exams();
+
+    echo $award->first();
 });
 
 //Route::get('/register', 'AwardingBodyController@show'

@@ -2,12 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AwardingBody;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-
 
 class LoginController extends Controller
 {
@@ -18,13 +14,12 @@ class LoginController extends Controller
         ]);
 
 
-       if (!Auth::attempt($login)){
-           return response(['message'=>'Invalid login credentials']);
-       }
+        if (!Auth::attempt($login)){
+            return response(['message'=>'Invalid login credentials']);
+        }
 
         $token = Auth::user()->createToken('authToken')->accessToken;
 
-       return response(['user'=>Auth::user(),'token'=>$token]);
+        return response(['user'=>Auth::user(),'token'=>$token]);
     }
-
 }

@@ -35,7 +35,7 @@ class AwardingBodyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $request->all();
     }
 
     /**
@@ -46,7 +46,7 @@ class AwardingBodyController extends Controller
      */
     public function show($id)
     {
-        return AwardingBody::whereId(1);
+       // return AwardingBody::whereId(1);
     }
 
     /**
