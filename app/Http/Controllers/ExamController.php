@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Exam;
 use Illuminate\Http\Request;
 
 class ExamController extends Controller
@@ -34,7 +35,9 @@ class ExamController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all();
+        $exam = new Exam();
+        //add columns
+        $exam ->save();
     }
 
     /**

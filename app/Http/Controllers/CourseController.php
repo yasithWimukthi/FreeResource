@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,9 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all();
+        $course = new Course;
+        //add columns
+        $course->save();
     }
 
     /**

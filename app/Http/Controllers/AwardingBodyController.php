@@ -35,7 +35,11 @@ class AwardingBodyController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all();
+        $awardingBody = new AwardingBody();
+        $awardingBody->name = $request->name;
+        $awardingBody->description = $request->description;
+
+        $awardingBody->save();
     }
 
     /**
