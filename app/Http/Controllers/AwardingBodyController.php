@@ -50,7 +50,7 @@ class AwardingBodyController extends Controller
      */
     public function show($id)
     {
-       // return AwardingBody::whereId(1);
+       $awardingBody = AwardingBody::findOrFail($id);
     }
 
     /**
@@ -62,6 +62,7 @@ class AwardingBodyController extends Controller
     public function edit($id)
     {
         //
+        $awardingBody = AwardingBody::findOrFail($id);
     }
 
     /**
@@ -73,7 +74,8 @@ class AwardingBodyController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        $awardingBody = AwardingBody::findOrFail($id);
+        $awardingBody->update($request->all());
     }
 
     /**

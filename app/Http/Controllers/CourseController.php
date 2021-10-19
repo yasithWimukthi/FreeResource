@@ -49,7 +49,7 @@ class CourseController extends Controller
      */
     public function show($id)
     {
-        //
+        $course = Course::findOrFail($id);
     }
 
     /**
@@ -60,7 +60,7 @@ class CourseController extends Controller
      */
     public function edit($id)
     {
-        //
+        $course = Course::findOrFail($id);
     }
 
     /**
@@ -72,7 +72,8 @@ class CourseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $course = Course::findOrFail($id);
+        $course->update($request->all());
     }
 
     /**

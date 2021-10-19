@@ -48,7 +48,7 @@ class ExamController extends Controller
      */
     public function show($id)
     {
-        //
+        $exam = Exam::findOrFail($id);
     }
 
     /**
@@ -59,7 +59,7 @@ class ExamController extends Controller
      */
     public function edit($id)
     {
-        //
+        $exam = Exam::findOrFail($id);
     }
 
     /**
@@ -71,7 +71,8 @@ class ExamController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $exam = Exam::findOrFail($id);
+        $exam->update($request->all());
     }
 
     /**
