@@ -22,4 +22,8 @@ class LoginController extends Controller
 
         return response(['user'=>Auth::user(),'token'=>$token]);
     }
+
+    public function logout(Request $request){
+        $request->user()->tokens()->delete();
+    }
 }
